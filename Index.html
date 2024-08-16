@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Points Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Points Management System</h1>
+        
+        <!-- Host Setup -->
+        <div id="host-setup">
+            <h2>Host Setup</h2>
+            <label for="common-amount">Enter Common Amount for All Players:</label>
+            <input type="number" id="common-amount" min="1">
+            <button onclick="startGame()">Start Game</button>
+        </div>
+        
+        <!-- Player Setup -->
+        <div id="player-setup" style="display:none;">
+            <h2>Player Setup</h2>
+            <div id="players"></div>
+            <button onclick="addPlayer()">Add Player</button>
+            <button onclick="finishSetup()">Finish Setup</button>
+        </div>
+        
+        <!-- Game Actions -->
+        <div id="game-actions" style="display:none;">
+            <h2>Game Actions</h2>
+            <div id="game-options">
+                <h3>Select an Action for Each Player</h3>
+                <div id="player-options"></div>
+            </div>
+            <button onclick="endRound()">End Round</button>
+        </div>
+        
+        <!-- Points Display -->
+        <div id="points-display" style="display:none;">
+            <h2>Points Management</h2>
+            <div id="points-table"></div>
+            <button onclick="nextRound()">Next Round</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
